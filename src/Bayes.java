@@ -61,9 +61,9 @@ public class Bayes {
 
         String path = "";
 
-        if (fileChoice.toLowerCase().endsWith("t")) {
+        if (fileChoice.toLowerCase().startsWith("tr")) {
             path = TRAINING_PATH;
-        } else if (fileChoice.toLowerCase().endsWith("g")) {
+        } else if (fileChoice.toLowerCase().startsWith("te")) {
             path = TEST_PATH;
         } else {
             System.err.println("BAD FILE NAME");
@@ -98,6 +98,9 @@ public class Bayes {
 
         System.out.println();
         model.printConfusionMatrix();
+
+        System.out.println("\n-- Press Enter for #4 --\n");
+        scan.nextLine();
 
         model.doNumber4Please();
     }
@@ -285,7 +288,7 @@ public class Bayes {
     }
 
     public void printConfusionMatrix() {
-        System.out.println("Confusion Matrix");
+        System.out.println("\nConfusion Matrix");
         System.out.println("           Predicted Yes  Predicted No");
         System.out.println("Actual Yes      " + YY + "            " + YN);
         System.out.println("Actual No       " + NY + "            " + NN);
@@ -316,6 +319,8 @@ public class Bayes {
      */
     public void printPrediction2() {
         int count = 1;
+
+        NN = NY = YN = YY = 0;
 
         for (Patient p : patientList) {
             double discNoVirus = withoutVirus;
