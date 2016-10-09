@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class Bayes {
 
-    private static final String TRAINING_PATH = "/home/maherm/IdeaProjects/Bayes/proj1train.txt";
-    private static final String TEST_PATH = "/home/maherm/IdeaProjects/Bayes/proj1test.txt";
+    private static final String TRAINING_PATH = "/home/maherH/IdeaProjects/Bayes/proj1train.jpeg";
+    private static final String TEST_PATH = "/home/maherH/IdeaProjects/Bayes/proj1test.jpeg";
 
     ArrayList<Patient> patientList;
 
