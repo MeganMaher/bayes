@@ -1,4 +1,5 @@
 /**
+ * The Patient class
  * Created by maherm on 2/12/16.
  */
 public class Patient {
